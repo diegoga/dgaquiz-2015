@@ -1,8 +1,13 @@
+* {margin: 0; padding: 0;}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+font: 16px Georgia, serif;
 }
 
-a {
-  color: #00B7FF;
+
+#page-wrap {margin: 2% auto; color: white;
 }
+.main {border: 1px solid #999999; padding: 1%; margin-bottom: 1px; color: black;}
+div > section {padding: 20px;}
+header, nav, footer { background: #eeeeee; text-align: center;}
+section {background: #eeeeee; text-align: center;}
+nav span{margin: 0px 20px 0px 0px;}
