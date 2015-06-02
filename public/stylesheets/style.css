@@ -7,7 +7,9 @@ font: 16px Georgia, serif;
 #page-wrap {margin: 2% auto; color: white;
 }
 .main {border: 1px solid #999999; padding: 1%; margin-bottom: 1px; color: black;}
+.negrita {font-weight: bold;}
 div > section {padding: 20px;}
 header, nav, footer { background: #eeeeee; text-align: center;}
 section {background: #eeeeee; text-align: center;}
 nav span{margin: 0px 20px 0px 0px;}
+img {vertical-align: middle;}
