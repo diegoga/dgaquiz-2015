@@ -31,7 +31,7 @@ sequelize.sync().then(function() {
 			Quiz.create({ pregunta: '¿Cuál es la capital del Reino Unido?',
 						  respuesta: 'Londres'
 			});
-			Quiz.create({ pregunta: '¿Quién escribió "El Quijote"',
+			Quiz.create({ pregunta: '¿Quién escribió "El Quijote"?',
 						  respuesta: 'Cervantes'
 			})
 			.then(function() {console.log('Base de datos inicializada')});
