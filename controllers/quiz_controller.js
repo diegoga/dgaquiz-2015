@@ -5,28 +5,27 @@ exports.load = function(req, res, next, quizId){
 		if (quiz) {
 			req.quiz = quiz;
 			next();
-		}else { next(new Error('No existe quizId = ' + quisId));}                
+		} else { next(new Error('No existe quizId = ' + quisId));}                
 	}).catch(function(error) {next(error);})
 };
 
 exports.index = function(req,res) {
 	models.Quiz.findAll().then(function(quizes) {
-		res.render('quizes/index.ejs', {quizes: quizes});
+		res.render('quizes/index', {quizes: quizes});
 	}).catch(function(error) {next(error);})
 };
 
 exports.show = function(req, res){
 		res.render('quizes/show', {quiz: req.quiz});
-	})
 };
 
 //GET /quizes/answer
 exports.answer = function(req, res){
 	var resultado = 'Incorrecto';
-	if ((req.query.respuesta === req.quiz.respuesta)){
+	if (req.query.respuesta === req.quiz.respuesta){
 		resultado='Correcto';
 	}
-	res.render('quizes/answer', {quiz: req.quiz, respuesta: respuesta});
+	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
 };
 
 exports.author = function(req, res){
