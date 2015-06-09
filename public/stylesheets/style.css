@@ -8,6 +8,7 @@ font: 16px Georgia, serif;
 }
 .main {border: 1px solid #999999; padding: 1%; margin-bottom: 1px; color: black;}
 .negrita {font-weight: bold;}
+.busca {border: 1px solid #777777; padding: 10px;}
 div > section {padding: 20px;}
 header, nav, footer { background: #eeeeee; text-align: center;}
 section {background: #eeeeee; text-align: center;}
