@@ -13,6 +13,7 @@ router.get('/quizes', quizController.index);
 router.get('/quizes/:quizId(\\d+)', quizController.show);
 router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 router.get('/author/author', quizController.author);
+router.get('/busquedas/busquedas', quizController.busquedas);
 
 
 module.exports = router;

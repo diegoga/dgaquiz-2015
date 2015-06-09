@@ -1,0 +1,17 @@
+
+    <br />
+    <p class='negrita'>Resultado de la búsqueda:</p>
+    <p><%= busca %></p>
+    <% if (quizes.length === 0) { %>
+    	<p>No se han encontrado registros que tengan coincidencia con <span class='negrita'><%= fallo %></span></p>
+    <% } else { %>
+    <table>
+    	<% var i; for (i=0; i < quizes.length; i++) { %>
+    	<tr><td><a href='../quizes/<%= quizes[i].id %>'><%= quizes[i].pregunta %></a></td></tr>
+    	<% } %>
+    </table>
+    <% } %>
+  
+    <p><%= busca %></p>
+    <a href='/quizes'>Volver</a>
+
