@@ -17,7 +17,7 @@ exports.index = function(req,res) {
 //Búsqueda, search
 exports.busquedas = function(req, res){
 	var busc = '%'+req.query.busqueda.replace(/ /g, '%')+'%';
-	models.Quiz.findAll({where:["pregunta like ?", busc]}).then(function(quizes) {
+	models.Quiz.findAll({where:["pregunta like ?", busc], order: ['pregunta']}).then(function(quizes) {
 		res.render('busquedas/busquedas', {quizes: quizes, fallo: req.query.busqueda, errors: []});
 		}).catch(function(error) { next(error);});
 };
@@ -29,7 +29,7 @@ exports.show = function(req, res){
 //GET /quizes/answer
 exports.answer = function(req, res){
 	var resultado = 'Incorrecto';
-	if (req.query.respuesta === req.quiz.respuesta){
+	if (req.query.respuesta.toUpperCase() === req.quiz.respuesta.toUpperCase()){
 		resultado='Correcto';
 	}
 	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: []});
@@ -78,6 +78,11 @@ exports.update = function(req, res){
 		}
 	};
 
+exports.destroy = function(req, res){
+	req.quiz.destroy().then(function() {
+		res.redirect('/quizes');
+		}).catch(function(error) { next(error);});
+};
 
 exports.author = function(req, res){
 	res.render('author/author', {autor: 'Diego González Álvarez', errors: []});

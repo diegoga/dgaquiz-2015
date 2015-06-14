@@ -1,17 +1,14 @@
 * {margin: 0; padding: 0;}
-body {
-font: 16px Georgia, serif;
-}
+body {font: 16px Georgia, serif;}
 
-
-#page-wrap {margin: 2% auto; color: white;
-}
+#page-wrap {margin: 2% auto; color: white;}
 .main {border: 1px solid #999999; padding: 1%; margin-bottom: 1px; color: black;}
 .negrita {font-weight: bold;}
 .busca {border: 1px solid #777777; padding: 10px;}
 div > section {padding: 20px;}
+div > h2 {text-align: center;}
 header, nav, footer { background: #eeeeee; text-align: center;}
-section {background: #eeeeee; text-align: center;}
+section {background: #eeeeee; text-align: left;}
 nav span{margin: 0px 20px 0px 0px;}
 img {vertical-align: middle;}
 table {margin: 0 auto; text-align: left;}
