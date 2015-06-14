@@ -15,3 +15,4 @@ section {background: #eeeeee; text-align: center;}
 nav span{margin: 0px 20px 0px 0px;}
 img {vertical-align: middle;}
 table {margin: 0 auto; text-align: left;}
+#ErrorMsgs {color: #ff6611; font-size: smaler}
