@@ -4,6 +4,7 @@ body {font: 16px Georgia, serif;}
 #page-wrap {margin: 2% auto; color: white;}
 .main {border: 1px solid #999999; padding: 1%; margin-bottom: 1px; color: black;}
 .negrita {font-weight: bold;}
+.azul{color: #0000ff;}
 .busca {border: 1px solid #777777; padding: 10px;}
 div > section {padding: 20px;}
 div > h2 {text-align: center;}

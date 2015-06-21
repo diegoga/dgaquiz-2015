@@ -10,7 +10,7 @@ exports.create = function(req, res){
 	if (errors) {
 		var i=0; var errores=new Array();
 		for(var prop in errors) errores[i++]={message: errors[prop]};
-		res.render('comments/new.ejs', {comment: comment, quizid: req.params.quizId, errors: err.errors});
+		res.render('comments/new.ejs', {comment: comment, quizid: req.params.quizId, errors: errores});
 		} else {
 			comment
 			.save()
