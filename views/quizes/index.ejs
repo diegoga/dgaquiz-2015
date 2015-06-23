@@ -4,18 +4,22 @@
     	<% var i; for (i=0; i < quizes.length; i++) { %>
     	<tr>
         <td><a href='quizes/<%= quizes[i].id %>'><%= quizes[i].tema %>&nbsp;-&nbsp;<%= quizes[i].pregunta %></a></td>
+        <% if(session.user) { %>
         <td><a href='quizes/<%= quizes[i].id %>/edit'><button>Editar</button></a></td>
         <td>
             <form method='post' action='quizes/<%= quizes[i].id %>?_method=delete'>
             <button type='submit' onClick='return confirm("Borrar: <%= quizes[i].pregunta %>");'>Borrar</button>
             </form>
         </td>
+        <% } %>
         </tr>
     	<% } %>
     </table>
     <br />
+    <% if(session.user) { %>
     <p><a href='quizes/new'><button type='button'>Crear una nueva pregunta</button></a></p>
     <br />
+    <% } %>
     <form method='get' name='buscar' action='/busquedas/busquedas' >
 		<p class='negrita'>Buscar registros:
 		<input type='search' name='busqueda' placeholder='Introduce la búsqeda' />
