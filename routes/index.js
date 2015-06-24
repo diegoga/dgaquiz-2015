@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.param('quizId', quizController.load);
+router.param('commentId', commentController.load);
 
 router.get('/login', sessionController.new);
 router.post('/login', sessionController.create);
@@ -23,11 +24,13 @@ router.post('/quizes/create', sessionController.loginRequired, quizController.cr
 router.get('/quizes/:quizId(\\d+)/edit', sessionController.loginRequired, quizController.edit);
 router.put('/quizes/:quizId(\\d+)', sessionController.loginRequired, quizController.update);
 router.delete('/quizes/:quizId(\\d+)', sessionController.loginRequired, quizController.destroy);
+
 router.get('/author/author', quizController.author);
 router.get('/busquedas/busquedas', quizController.busquedas);
 
 router.get('/quizes/:quizId(\\d+)/comments/new', commentController.new);
 router.post('/quizes/:quizId(\\d+)/comments', commentController.create);
+router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionController.loginRequired, commentController.publish);
 
 
 module.exports = router;
